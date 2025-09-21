@@ -1,10 +1,10 @@
 import { Canvas } from '@react-three/fiber';
-import { Points, PointMaterial, Float } from '@react-three/drei';
-import { useRef, useMemo } from 'react';
+import { Points, PointMaterial } from '@react-three/drei';
+import { useRef, useMemo, useState, useEffect } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
-function ParticleField() {
+function ParticleField({ mousePosition }: { mousePosition: { x: number; y: number } }) {
   const ref = useRef<THREE.Points>(null);
   
   // Generate random particles
@@ -20,8 +20,16 @@ function ParticleField() {
 
   useFrame((state) => {
     if (ref.current) {
-      ref.current.rotation.x = state.clock.elapsedTime * 0.05;
-      ref.current.rotation.y = state.clock.elapsedTime * 0.03;
+      // Base rotation
+      const baseRotationX = state.clock.elapsedTime * 0.05;
+      const baseRotationY = state.clock.elapsedTime * 0.03;
+      
+      // Mouse influence (opposite direction with reduced intensity)
+      const mouseInfluenceX = -mousePosition.y * 0.3;
+      const mouseInfluenceY = -mousePosition.x * 0.3;
+      
+      ref.current.rotation.x = baseRotationX + mouseInfluenceX;
+      ref.current.rotation.y = baseRotationY + mouseInfluenceY;
     }
   });
 
@@ -39,25 +47,23 @@ function ParticleField() {
   );
 }
 
-function FloatingGeometry({ position, color }: { position: [number, number, number]; color: string }) {
-  return (
-    <Float speed={2} rotationIntensity={1} floatIntensity={2}>
-      <mesh position={position}>
-        <icosahedronGeometry args={[0.3]} />
-        <meshStandardMaterial 
-          color={color} 
-          transparent 
-          opacity={0.6}
-          wireframe
-          emissive={color}
-          emissiveIntensity={0.2}
-        />
-      </mesh>
-    </Float>
-  );
-}
+
 
 export default function ThreeBackground() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      // Normalize mouse position to -1 to 1 range
+      const x = (event.clientX / window.innerWidth) * 2 - 1;
+      const y = (event.clientY / window.innerHeight) * 2 - 1;
+      setMousePosition({ x, y });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   return (
     <div className="fixed inset-0 -z-10">
       <Canvas camera={{ position: [0, 0, 5], fov: 60 }}>
@@ -65,13 +71,7 @@ export default function ThreeBackground() {
         <pointLight position={[10, 10, 10]} color="#00ffff" intensity={0.5} />
         <pointLight position={[-10, -10, -10]} color="#ff00ff" intensity={0.3} />
         
-        <ParticleField />
-        
-        <FloatingGeometry position={[-2, 1, -2]} color="#00ffff" />
-        <FloatingGeometry position={[2, -1, -3]} color="#ff00ff" />
-        <FloatingGeometry position={[0, 2, -4]} color="#0080ff" />
-        <FloatingGeometry position={[-3, -2, -1]} color="#ff0080" />
-        <FloatingGeometry position={[3, 1, -5]} color="#80ff00" />
+        <ParticleField mousePosition={mousePosition} />
       </Canvas>
     </div>
   );
