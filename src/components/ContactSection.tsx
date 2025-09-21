@@ -71,38 +71,31 @@ export default function ContactSection() {
       icon: <Mail className="h-6 w-6" />,
       label: "Email",
       value: "sudhakarsureshblr30@gmail.com",
-      href: "mailto:john@example.com",
+      href: "mailto:sudhakarsureshblr30@gmail.com",
     },
     {
       icon: <Phone className="h-6 w-6" />,
       label: "Phone",
       value: "+91 9900178238",
-      href: "tel:+15551234567",
     },
     {
       icon: <MapPin className="h-6 w-6" />,
       label: "Location",
       value:
         "#6,2rd Cross, Sunrise Layout, Kyalasanahalli, Byrathi, Benguluru-560077",
-      href: "#",
     },
   ];
 
   const socialLinks = [
     {
       icon: <Github className="h-6 w-6" />,
-      href: "https://github.com",
+      href: "https://github.com/Sudhakar-Suresh",
       label: "GitHub",
     },
     {
       icon: <Linkedin className="h-6 w-6" />,
-      href: "https://linkedin.com",
+      href: "https://linkedin.com/in/sudhakar-s-6565a42ba",
       label: "LinkedIn",
-    },
-    {
-      icon: <Twitter className="h-6 w-6" />,
-      href: "https://twitter.com",
-      label: "Twitter",
     },
   ];
 
@@ -226,7 +219,7 @@ export default function ContactSection() {
                       value={formData.email}
                       onChange={handleChange}
                       className="bg-background-secondary border-glass-border focus:border-primary"
-                      placeholder="your.email@example.com"
+                      placeholder="your@mail.com"
                       required
                     />
                   </div>
