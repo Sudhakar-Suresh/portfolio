@@ -1,33 +1,53 @@
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { ExternalLink, Github } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Github } from "lucide-react";
 
 export default function ProjectsSection() {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com"
+      title: "Face Clustering Project",
+      description:
+        "An advanced computer vision project that automatically groups similar faces using deep learning algorithms. Features face detection, embedding extraction, and unsupervised clustering for organizing large photo collections.",
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
+      tech: [
+        "Python",
+        "OpenCV",
+        "TensorFlow",
+        "scikit-learn",
+        "NumPy",
+        "Matplotlib",
+      ],
+      liveUrl: "https://github.com/Sudhakar-Suresh/face-clustering-project",
+      githubUrl: "https://github.com/Sudhakar-Suresh/face-clustering-project",
     },
     {
-      title: "Task Management App",
-      description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
-      tech: ["Next.js", "TypeScript", "Prisma", "Socket.io", "Framer Motion"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com"
+      title: "Front-end Task Manager",
+      description:
+        "A modern task management application built with React, featuring intuitive task creation, organization, and tracking. Clean UI with responsive design for efficient productivity management.",
+      image:
+        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
+      tech: [
+        "React",
+        "JavaScript",
+        "CSS3",
+        "HTML5",
+        "Local Storage",
+        "Responsive Design",
+      ],
+      liveUrl: "https://github.com/Sudhakar-Suresh/Front-end-Taskmanager",
+      githubUrl: "https://github.com/Sudhakar-Suresh/Front-end-Taskmanager",
     },
     {
-      title: "AI-Powered Analytics Dashboard",
-      description: "A data visualization platform that uses machine learning to provide insights and predictions for business metrics.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-      tech: ["React", "Python", "TensorFlow", "D3.js", "FastAPI"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com"
-    }
+      title: "Data Analytics Dashboard",
+      description:
+        "Interactive dashboard for data visualization and analysis with dynamic charts, filtering capabilities, and export functionality for business intelligence.",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      tech: ["React", "D3.js", "Python", "Pandas", "Chart.js", "REST API"],
+      liveUrl: "#",
+      githubUrl: "#",
+    },
   ];
 
   return (
@@ -44,7 +64,8 @@ export default function ProjectsSection() {
             <span className="gradient-text">Featured Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A showcase of my recent work, demonstrating technical skills and creative problem-solving.
+            A showcase of my recent work, demonstrating technical skills and
+            creative problem-solving.
           </p>
         </motion.div>
 
@@ -92,7 +113,7 @@ export default function ProjectsSection() {
                 <p className="text-muted-foreground mb-4 line-clamp-3">
                   {project.description}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech) => (
                     <span
@@ -110,7 +131,11 @@ export default function ProjectsSection() {
                     className="flex-1 bg-transparent border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                     asChild
                   >
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <ExternalLink className="h-4 w-4 mr-2" />
                       Live Demo
                     </a>
@@ -121,7 +146,11 @@ export default function ProjectsSection() {
                     className="flex-1 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300"
                     asChild
                   >
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Github className="h-4 w-4 mr-2" />
                       Code
                     </a>
@@ -142,9 +171,16 @@ export default function ProjectsSection() {
           <Button
             size="lg"
             className="neon-border bg-transparent text-primary border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            asChild
           >
-            <Github className="h-5 w-5 mr-2" />
-            View All Projects on GitHub
+            <a
+              href="https://github.com/Sudhakar-Suresh"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="h-5 w-5 mr-2" />
+              View All Projects on GitHub
+            </a>
           </Button>
         </motion.div>
       </div>
