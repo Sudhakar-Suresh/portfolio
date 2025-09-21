@@ -43,8 +43,8 @@ export default function ProjectsSection() {
       description:
         "A comprehensive healthcare management system built with PHP and MySQL to manage patient records, appointments, and doctor information. Features secure login, CRUD operations, and database connectivity for efficient hospital administration.",
       image:
-        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
-      tech: ["PHP", "MySQL", "HTML5", "CSS3", "JavaScript", "XAMPP"],
+        "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      tech: ["PHP", "MySQL", "HTML5", "CSS3", "JavaScript", "XAMPP","Responsive Design"],
       liveUrl: "https://github.com/Sudhakar-Suresh/Hospital_management",
       githubUrl: "https://github.com/Sudhakar-Suresh/Hospital_management",
     },
