@@ -1,41 +1,55 @@
-import { motion } from 'framer-motion';
-import { Progress } from '@/components/ui/progress';
+import { motion } from "framer-motion";
+import { Progress } from "@/components/ui/progress";
 
 export default function SkillsSection() {
   const skillCategories = [
     {
+      title: "Programming Languages",
+      skills: [
+        { name: "Python", level: 85 },
+        { name: "JavaScript", level: 80 },
+        { name: "PHP", level: 75 },
+        { name: "C++", level: 70 },
+      ],
+    },
+    {
       title: "Frontend Development",
       skills: [
-        { name: "React/Next.js", level: 95 },
-        { name: "TypeScript", level: 90 },
-        { name: "Tailwind CSS", level: 95 },
-        { name: "Three.js", level: 80 },
-      ]
+        { name: "React.js", level: 80 },
+        { name: "HTML5/CSS3", level: 85 },
+        { name: "JavaScript", level: 80 },
+        { name: "Responsive Design", level: 75 },
+      ],
     },
     {
-      title: "Backend Development",
+      title: "Backend & Database",
       skills: [
-        { name: "Node.js", level: 88 },
-        { name: "Python", level: 85 },
-        { name: "PostgreSQL", level: 82 },
-        { name: "MongoDB", level: 80 },
-      ]
+        { name: "PHP", level: 75 },
+        { name: "MySQL", level: 70 },
+        { name: "XAMPP Server", level: 75 },
+        { name: "Git/GitHub", level: 80 },
+      ],
     },
-    {
-      title: "Tools & Technologies",
-      skills: [
-        { name: "Git/GitHub", level: 92 },
-        { name: "Docker", level: 78 },
-        { name: "AWS", level: 75 },
-        { name: "Figma", level: 85 },
-      ]
-    }
   ];
 
   const technologies = [
-    "React", "TypeScript", "Node.js", "Python", "PostgreSQL", "MongoDB",
-    "Next.js", "Tailwind CSS", "Three.js", "Docker", "AWS", "Git",
-    "Figma", "GraphQL", "REST APIs", "Prisma"
+    "Python",
+    "JavaScript",
+    "PHP",
+    "C++",
+    "React.js",
+    "HTML5",
+    "CSS3",
+    "MySQL",
+    "Git",
+    "GitHub",
+    "XAMPP",
+    "Machine Learning",
+    "OpenCV",
+    "TensorFlow",
+    "scikit-learn",
+    "NumPy",
+    "Matplotlib",
   ];
 
   return (
@@ -52,7 +66,7 @@ export default function SkillsSection() {
             <span className="gradient-text">Skills & Expertise</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A comprehensive toolkit for building modern, scalable applications 
+            A comprehensive toolkit for building modern, scalable applications
             from conception to deployment.
           </p>
         </motion.div>
@@ -75,17 +89,24 @@ export default function SkillsSection() {
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skill.name}>
                     <div className="flex justify-between mb-2">
-                      <span className="text-foreground font-medium">{skill.name}</span>
-                      <span className="text-muted-foreground">{skill.level}%</span>
+                      <span className="text-foreground font-medium">
+                        {skill.name}
+                      </span>
+                      <span className="text-muted-foreground">
+                        {skill.level}%
+                      </span>
                     </div>
                     <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: "100%" }}
-                      transition={{ duration: 1, delay: categoryIndex * 0.2 + skillIndex * 0.1 }}
+                      transition={{
+                        duration: 1,
+                        delay: categoryIndex * 0.2 + skillIndex * 0.1,
+                      }}
                       viewport={{ once: true }}
                     >
-                      <Progress 
-                        value={skill.level} 
+                      <Progress
+                        value={skill.level}
                         className="h-2 bg-background-secondary"
                       />
                     </motion.div>

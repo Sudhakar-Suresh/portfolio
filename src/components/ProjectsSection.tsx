@@ -39,14 +39,14 @@ export default function ProjectsSection() {
       githubUrl: "https://github.com/Sudhakar-Suresh/Front-end-Taskmanager",
     },
     {
-      title: "Data Analytics Dashboard",
+      title: "Healthcare Management System",
       description:
-        "Interactive dashboard for data visualization and analysis with dynamic charts, filtering capabilities, and export functionality for business intelligence.",
+        "A comprehensive healthcare management system built with PHP and MySQL to manage patient records, appointments, and doctor information. Features secure login, CRUD operations, and database connectivity for efficient hospital administration.",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-      tech: ["React", "D3.js", "Python", "Pandas", "Chart.js", "REST API"],
-      liveUrl: "#",
-      githubUrl: "#",
+        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
+      tech: ["PHP", "MySQL", "HTML5", "CSS3", "JavaScript", "XAMPP"],
+      liveUrl: "https://github.com/Sudhakar-Suresh/Hospital_management",
+      githubUrl: "https://github.com/Sudhakar-Suresh/Hospital_management",
     },
   ];
 

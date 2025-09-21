@@ -29,7 +29,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="gradient-text">John</span>
+              <span className="gradient-text">Sudhakar</span>
               <br />
               <span className="text-foreground">Developer</span>
             </motion.h1>
@@ -40,9 +40,9 @@ export default function HeroSection() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Full-Stack Developer & UI/UX Enthusiast
+              Software Developer & Full-Stack Enthusiast
               <br />
-              Creating digital experiences that matter
+              Building dynamic, responsive, and scalable web applications
             </motion.p>
           </div>
 
@@ -76,7 +76,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <a
-              href="https://github.com"
+              href="https://github.com/Sudhakar-Suresh"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 glass-card rounded-full hover-lift neon-glow transition-all duration-300"
@@ -84,7 +84,7 @@ export default function HeroSection() {
               <Github className="h-6 w-6 text-primary" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/sudhakar-s-656a420a"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 glass-card rounded-full hover-lift neon-glow transition-all duration-300"
@@ -92,7 +92,7 @@ export default function HeroSection() {
               <Linkedin className="h-6 w-6 text-primary" />
             </a>
             <a
-              href="mailto:john@example.com"
+              href="mailto:sudhakarsureshbhr30@gmail.com"
               className="p-3 glass-card rounded-full hover-lift neon-glow transition-all duration-300"
             >
               <Mail className="h-6 w-6 text-primary" />

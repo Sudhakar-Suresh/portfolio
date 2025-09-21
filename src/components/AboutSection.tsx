@@ -1,28 +1,32 @@
-import { motion } from 'framer-motion';
-import { Code, Palette, Zap, Users } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Code, Palette, Zap, Users } from "lucide-react";
 
 export default function AboutSection() {
   const features = [
     {
       icon: <Code className="h-8 w-8" />,
       title: "Clean Code",
-      description: "Writing maintainable, scalable, and efficient code that stands the test of time."
+      description:
+        "Writing maintainable, scalable, and efficient code that stands the test of time.",
     },
     {
       icon: <Palette className="h-8 w-8" />,
       title: "Creative Design",
-      description: "Crafting beautiful, intuitive interfaces that provide exceptional user experiences."
+      description:
+        "Crafting beautiful, intuitive interfaces that provide exceptional user experiences.",
     },
     {
       icon: <Zap className="h-8 w-8" />,
       title: "Performance",
-      description: "Optimizing applications for speed, accessibility, and cross-platform compatibility."
+      description:
+        "Optimizing applications for speed, accessibility, and cross-platform compatibility.",
     },
     {
       icon: <Users className="h-8 w-8" />,
       title: "Collaboration",
-      description: "Working effectively with teams to deliver projects on time and exceed expectations."
-    }
+      description:
+        "Working effectively with teams to deliver projects on time and exceed expectations.",
+    },
   ];
 
   return (
@@ -39,9 +43,11 @@ export default function AboutSection() {
             <span className="gradient-text">About Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            I'm a passionate full-stack developer with over 5 years of experience creating 
-            digital solutions that bridge the gap between design and functionality. 
-            I love turning complex problems into simple, beautiful, and intuitive solutions.
+            I'm a motivated and enthusiastic software developer with a strong
+            foundation in both front-end and back-end technologies. Having
+            completed my MCA, I'm eager to contribute to real-world projects and
+            build dynamic, responsive, and scalable web applications while
+            continuously improving my skills.
           </p>
         </motion.div>
 
@@ -61,9 +67,7 @@ export default function AboutSection() {
               <h3 className="text-xl font-semibold mb-3 text-foreground">
                 {feature.title}
               </h3>
-              <p className="text-muted-foreground">
-                {feature.description}
-              </p>
+              <p className="text-muted-foreground">{feature.description}</p>
             </motion.div>
           ))}
         </div>
@@ -77,15 +81,26 @@ export default function AboutSection() {
         >
           <h3 className="text-2xl font-bold mb-6 gradient-text">My Journey</h3>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            My journey in tech started during my computer science studies, where I discovered 
-            my passion for creating digital experiences. What began as curiosity about how 
-            websites work evolved into a career dedicated to crafting exceptional software solutions.
+            I've completed my MCA from Kristu Jayanti College, Bengaluru,
+            building upon my strong foundation in computer science from my BCA
+            at Indian Academy Degree College. My academic journey has been
+            enriched by practical internship experiences and hands-on project
+            development.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            During my internship at Kristu Jayanti Software Development Centre,
+            I gained valuable experience in backend development, helping with
+            code debugging and testing small modules to understand real-world
+            application behavior. At 01Crew, I worked with modern front-end
+            technologies like React and JavaScript, learning to build dynamic
+            user interfaces and using Git for collaborative development
+            workflows.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            I specialize in React, Node.js, and modern web technologies, with a strong focus 
-            on user experience and performance optimization. When I'm not coding, you'll find me 
-            exploring new technologies, contributing to open-source projects, or mentoring 
-            aspiring developers.
+            I specialize in Python, JavaScript, React, and PHP, with hands-on
+            experience in both front-end and back-end development. My projects
+            range from machine learning applications like face clustering to
+            full-stack web applications including healthcare management systems.
           </p>
         </motion.div>
       </div>
